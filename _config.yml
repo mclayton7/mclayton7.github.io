@@ -3,11 +3,4 @@ description: Mac Clayton's personal blog
 markdown: redcarpet
 pygments: true
 permalink: /:categories/:title
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
-
-asset_pipeline:
-  bundle: true            # Default = true
-  compress: true          # Default = true
-  output_path: assets     # Default = assets
-  display_path: nil       # Default = nil
-  gzip: false             # Default = false
+exclude: ["config.json", "Gemfile", "Gemfile.lock", "Rakefile", "README.md", "*.scss"]

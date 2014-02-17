@@ -1,3 +1,4 @@
+require "reduce"
 
 desc "Delete _site/"
 task :delete do
@@ -11,6 +12,29 @@ task :preview do
   puts "\n## Opening _site/ in browser"
   status = system("open http://0.0.0.0:4000/")
   puts status ? "Success" : "Failed"
+end
+
+# Courtesy of https://github.com/pacbard/blog/blob/master/_rake/minify.rake
+desc "Minify _site/"
+task :minify do
+  puts "\n## Compressing static assets"
+  original = 0.0
+  compressed = 0
+  Dir.glob("_site/**/*.*") do |file|
+    case File.extname(file)
+      when ".css", ".gif", ".html", ".jpg", ".jpeg", ".js", ".png", ".xml"
+        puts "Processing: #{file}"
+        original += File.size(file).to_f
+        min = Reduce.reduce(file)
+        File.open(file, "w") do |f|
+          f.write(min)
+        end
+        compressed += File.size(file)
+      else
+        puts "Skipping: #{file}"
+      end
+  end
+  puts "Total compression %0.2f\%" % (((original-compressed)/original)*100)
 end
 
 desc "Recompile Sass"
@@ -42,7 +66,7 @@ namespace :build do
   desc "Build _site/ for production"
   task :pro => :recompile_sass do
     puts "\n## Compiling Sass"
-    status = system("sass --style compressed _assets/scss/main.scss:assets/css/main.css")
+    status = system("sass --style compressed assets/scss/styles.scss:assets/css/styles.css")
     puts status ? "Success" : "Failed"
     puts "\n## Building Jekyll to _site/"
     status = system("jekyll build")
