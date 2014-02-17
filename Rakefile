@@ -1,10 +1,58 @@
-require 'rubygems'
-require 'rake'
-require 'rdoc'
-require 'date'
-require 'yaml'
-require 'tmpdir'
-require 'jekyll'
+
+desc "Delete _site/"
+task :delete do
+  puts "\## Deleting _site/"
+  status = system("rm -r _site")
+  puts status ? "Success" : "Failed"
+end
+
+desc "Preview _site/"
+task :preview do
+  puts "\n## Opening _site/ in browser"
+  status = system("open http://0.0.0.0:4000/")
+  puts status ? "Success" : "Failed"
+end
+
+desc "Recompile Sass"
+task :recompile_sass do
+  puts "\n## Forcing Sass to recompile"
+  status = system("touch -m assets/scss/styles.scss")
+  puts status ? "Success" : "Failed"
+end
+
+namespace :build do
+  desc "Build _site/ for development"
+  task :dev => :recompile_sass do
+    puts "\n##  Starting Jekyll and recompiling Sass with source map"
+    pids = [
+      spawn("sass --sourcemap --watch assets/scss/styles.scss:assets/css/styles.css"),
+      spawn("jekyll serve -w")
+    ]
+
+    trap "INT" do
+      Process.kill "INT", *pids
+      exit 1
+    end
+
+    loop do
+      sleep 1
+    end
+  end
+
+  desc "Build _site/ for production"
+  task :pro => :recompile_sass do
+    puts "\n## Compiling Sass"
+    status = system("sass --style compressed _assets/scss/main.scss:assets/css/main.css")
+    puts status ? "Success" : "Failed"
+    puts "\n## Building Jekyll to _site/"
+    status = system("jekyll build")
+    puts status ? "Success" : "Failed"
+    Rake::Task["minify"].invoke
+    puts "\n## Deleting Sass source map"
+    status = system("rm -f _site/assets/css/*.map")
+    puts status ? "Success" : "Failed"
+  end
+end
 
 desc "Commit _site/"
 task :commit do
@@ -42,5 +90,3 @@ end
 desc "Commit and deploy _site/"
 task :commit_deploy => [:commit, :deploy] do
 end
-
-task :default => [:commit, :deploy]
