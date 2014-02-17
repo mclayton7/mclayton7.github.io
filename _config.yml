@@ -1,3 +1,12 @@
-name: Your New Jekyll Site
+name: Mac Clayton
+description: Mac Clayton's personal blog
 markdown: redcarpet
 pygments: true
+permalink: /:categories/:title
+
+asset_pipeline:
+  bundle: true            # Default = true
+  compress: true          # Default = true
+  output_path: assets     # Default = assets
+  display_path: nil       # Default = nil
+  gzip: false             # Default = false

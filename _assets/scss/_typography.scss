@@ -1,0 +1,37 @@
+// Possible Serif Fonts:
+// Arvo, PT Serif, Droid Sans
+
+// Possible Sans-Serif Fonts:
+// Lato
+
+// Possible Monospace Fonts:
+// PT Mono
+// www.creativebloq.com/typography/10-best-google-fonts-print-web-and-mobile-11135171
+
+$font-family: serif;
+$font-size: 12px;
+
+
+h1, h2, h3, h4, h5, h6 {
+	// font-family: Lato;
+	font-weight: 700;
+	color: gray;
+}
+h2 {
+	font-family: "Arvo", serif;
+}
+
+p {
+	font-family: "Arvo";
+	color: rgb(51, 51, 0);
+}
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
+}
+

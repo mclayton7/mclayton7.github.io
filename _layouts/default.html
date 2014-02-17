@@ -3,34 +3,32 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ page.title }}</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        {% css_asset_tag global_css %}
+        - /_assets/scss/main.scss
+        {% endcss_asset_tag %}
 
         <!-- Scripts -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        
     </head>
-	
-	<body>
-		<header>
-			<div class='container'>
-				{% include navigation.html %}
-			</div>
-		</header>
-		
-		<div class='container'>
-			{{ content }}
-		</div>
+        <body>
+            <header>
+                <div class='container'>
+                    {% include navigation.html %}
+                </div>
+            </header>
+                
+            <div class='container'>
+                {{ content }}
+            </div>
 
-		<footer>
-		<div class='container'>
-			<p>&copy; {{ site.time | date: "%Y" }} Mac Clayton</p>
-		</div>
-		</footer>
-	</body>
+            <footer>
+                <div class='container'>
+                    <p>&copy; {{ site.time | date: "%Y" }} Mac Clayton</p>
+                </div>
+            </footer>
+        </body>
 </html>

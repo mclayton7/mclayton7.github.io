@@ -1,0 +1,47 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+  zoom: 1;
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both; }
+}
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+ }
+
+
+
+// General:
+html, body {
+    height: 100%;
+    font-size: 100%;
+    color: $base-font-color;
+}
+header {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    margin: 0;
+}
+
+// Layout and Grid:
+.wrap {
+    width: 96%;
+    margin: 0 auto;
+}
