@@ -49,7 +49,7 @@ namespace :build do
   task :dev => :recompile_sass do
     puts "\n##  Starting Jekyll and recompiling Sass with source map"
     pids = [
-      spawn("sass --sourcemap --watch assets/scss/main.scss:assets/css/main.css"),
+      spawn("sass --debug-info assets/scss/main.scss:assets/css/main.css"),
       spawn("jekyll serve -w")
     ]
 
