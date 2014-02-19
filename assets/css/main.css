@@ -596,30 +596,39 @@ footer {
   margin: 0.5rem 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000361}}
+.home-nav {
+  text-align: center;
+  font-family: 'Arvo', sans-serif;
+  padding-bottom: 4em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000364}}
+  .home-nav h4 {
+    padding-bottom: 1.5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000370}}
 nav {
   height: 0;
   margin: 0;
   overflow: hidden;
   padding: 0;
   width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000376}}
   nav.hidden {
     height: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000379}}
   nav.visible {
     height: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000382}}
   nav ul {
     margin: 0.5rem 0 0 0;
     overflow: hidden;
     padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000387}}
   nav li {
     border-top: 1px solid #eee;
     list-style: none;
     margin-bottom: 0;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000392}}
     nav li a {
       color: #999;
       font-size: 1rem;
@@ -629,15 +638,15 @@ nav {
       -webkit-transition: color 0.2s ease-out;
       transition: color 0.2s ease-out;
       padding: 0.8rem 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003102}}
     nav li:last-child a {
       padding-bottom: 0.3rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003105}}
     nav li a:hover {
       color: #333;
       text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003113}}
 .circle-image {
   display: block;
   max-width: 200px;
@@ -646,20 +655,29 @@ nav {
   border-radius: 50%;
   margin: 0 auto 1.5rem auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003124}}
 body p {
   margin-bottom: 2em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003130}}
 .fourOHfour {
   text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003132}}
   .fourOHfour h1 {
     font-size: 5rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003138}}
 .twitter {
   display: inline-block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003147}}
+.hero {
+  display: block;
+  text-align: center;
+  padding-bottom: 3em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003150}}
+  .hero h1 {
+    font-size: 4rem; }
 
 @media only screen and (min-width: 481px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\000031}}
@@ -704,160 +722,7 @@ body p {
         padding: 0.6rem 0 0.4rem 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000335}}
       nav li:last-child a {
-        padding-bottom: 0.4rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000340}}
-  .column {
-    float: left;
-    margin-right: 5%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000344}}
-  .one-third {
-    width: 30%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000347}}
-  .half {
-    width: 47.5%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000350}}
-  .two-third {
-    width: 65%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000353}}
-  .row .column:last-child {
-    margin-right: 0;
-    clear: right; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000357}}
-  .column-example-bad {
-    float: left;
-    margin-left: 3.2%;
-    width: 31.2%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000362}}
-  .first {
-    border: 1px solid #008080;
-    margin-left: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000366}}
-  .column-example {
-    float: left;
-    margin-left: 3.2%;
-    width: 31.2%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000370}}
-    .column-example:first-child {
-      border: 1px solid #008080;
-      margin-left: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000375}}
-  .timeline-header {
-    margin-bottom: 3rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000378}}
-  .timeline:before {
-    background: #ddd;
-    content: " ";
-    position: absolute;
-    top: 20px;
-    left: 31%;
-    bottom: 0;
-    width: 1px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000387}}
-  .timeline-date-wrap {
-    display: block;
-    left: 0;
-    top: 14px;
-    position: absolute;
-    width: 24%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\0000394}}
-  .timeline-date {
-    color: #999;
-    display: block;
-    font-size: 0.9rem;
-    text-align: right; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003100}}
-  .timeline-date-mobile {
-    display: none; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003103}}
-  .timeline-circle {
-    background: #FFF;
-    border: 2px solid #333;
-    -moz-border-radus: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    height: 16px;
-    width: 16px;
-    left: 29.8%;
-    top: 20px;
-    position: absolute; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003115}}
-  .timeline-box {
-    background: #FFF;
-    border: 1px solid #DDD;
-    -moz-border-radus: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    margin: 0 0 2rem 40%;
-    position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003123}}
-    .timeline-box:after {
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      right: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003132}}
-    .timeline-box:before {
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      right: 100%;
-      border-color: rgba(221, 221, 221, 0);
-      border-right-color: #DDD;
-      border-width: 15px;
-      left: auto;
-      margin-left: 0;
-      top: 12px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003147}}
-    .timeline-box:after {
-      border-color: rgba(255, 255, 255, 0);
-      border-right-color: #FFF;
-      border-width: 14px;
-      left: auto;
-      margin-left: 0;
-      top: 13px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003156}}
-  .timeline-header h2, .timeline p {
-    font-size: 0.9rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003159}}
-  .location {
-    font-size: 0.8rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003162}}
-  .timeline-footer {
-    font-size: 0.8rem;
-    margin-top: 3rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003166}}
-  .article-title {
-    margin-bottom: 0.3rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\00003169}}
-  .back-to-top {
-    font-size: 0.9rem;
-    text-align: center; } }
+        padding-bottom: 0.4rem; } }
 @media only screen and (min-width: 768px) {
   /******************************************************************
   Site Name:
