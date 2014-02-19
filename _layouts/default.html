@@ -27,18 +27,21 @@
     </head>
         <body>
             <header>
-                <div class='container'>
+                <div class="container">
                     {% include navigation.html %}
                 </div>
             </header>
                 
-            <div class='container'>
+            <div class="container">
                 {{ content }}
             </div>
 
             <footer>
-                <div class='container'>
-                    <p>&copy; {{ site.time | date: "%Y" }} Mac Clayton</p>
+                <div class="container">
+                    <p>
+                        &copy; {{ site.time | date: "%Y" }} Mac Clayton
+                        <img src="/assets/img/twitter-circle.png" alt="Mac Clayton" class="twitter">
+                    </p>
                 </div>
             </footer>
         </body>
