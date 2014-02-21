@@ -1,0 +1,44 @@
+---
+title: RSA Cryptography
+layout: project
+---
+
+<h1>RSA Cryptography In C++</h1>
+<a href="https://github.com/mclayton7/RSA">Github Source</a>
+   
+
+<p>The <a href="http://en.wikipedia.org/wiki/RSA_(algorithm)">RSA Algorithm</a> was developed in 1977 by Ron Rivest, Adi Shamir, and Leonard Adleman (hence the initials RSA). While MIT was granted a U.S. Patent for the algorithm in 1983, it has since been released into public domain.</p>
+            
+<h2>The Algorithm:</h2>
+<h3>Key Generation:</h3>
+<p>
+	<ol>
+		<li>Choose two distinct prime numbers, <em>p</em> and <em>q</em>.</li>
+		<li>Compute *n = p\*q*</li>
+		<li>Compute *φ(n) = φ(p)φ(q) = (p − 1)(q − 1)* where φ(n) is the <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">Totient Function</a></li>
+		<li>Choose an integer <em>e</em> such that 1 < <em>e</em> < φ(n) and gcd(<em>e</em>, φ(n)) = 1. In other words, <em>e</em> and φ(n) are coprime.</li>
+		<li>Solve for <em>d</em>, where <em>d</em> is: *d = e−1*</li>
+		<li><em>e</em> is now the Public Key, and <em>d</em> is now the Private Key</li>
+	</ol>
+</p>
+
+<h2>GMP Library Help</h2>
+<p>While this algorithm can be confusing to implement in C++, we can use a helpful library called <a href="https://gmplib.org/">GMP (GNU Multiple Precision Arithmetic Library</a>. Specifically, we'll use the following classes and functions to help us:
+	<ul>
+		<li>mpz_class(t) - A class that allows us to handle large integers  </li>
+		<li>mpz_mod(r, n, d) - Performs the modulo operation  by setting r to n mod d. </li>
+		<li>mpz_gcd(rop, op1, op2) - Sets rop to the greatest common divisor of op1 and op2. </li>
+		<li>mpz_invert(rop, op1, op2) - Computes the inverse of op1 mod op2 and puts the result in rop. </li>
+		<li>mpz_probab_prime_p(n, reps) - Determines whether n is prime. Returns 2 if definitely prime, 1 if probably prime, and 0 if n is definitely composite.</li>
+	</ul>
+</p>
+
+<h2>Breaking RSA</h2>
+<p>One of the quickest ways to factor a large number is to use <a href="http://en.wikipedia.org/wiki/Pollard's_rho_algorithm)">Pollard's Rho Algorithm</a>. If you're interested in using GPU power like CUDA, there is <em>allegedly</em> an FBI GPU factoring tool called "Templar" that's out there on the internets.</p>
+Using C++
+<script src="https://gist.github.com/mclayton7/d3bb6be82587a5e39bf2.js"></script>
+
+
+
+<h2>Conclusion</h2>
+<p>RSA is a popular cryptography algorithm that is widely used across many platforms. Hopefully this article gives some insight on how to implement a basic version of an encryption & decryption function. 
