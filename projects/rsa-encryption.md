@@ -21,13 +21,14 @@ Key Generation:
 5. Solve for *d*, where *d* is: *d = e−1*  
 6. *e* is now the Public Key, and *d* is now the Private Key
 
-Using C++
+GMP Library Help
 -------------
 While this algorithm can be confusing to implement in C++, we can use a helpful library called [*GMP (GNU Multiple Precision Arithmetic Library)*](https://gmplib.org/).  Specifically, we'll use the following classes and functions to help us:  
-+ `mpz_class(t)` - A class that allows us to handle large integers  
-+ `mpz_mod(r, n, d)` - Performs the modulo operation  by setting `r` to `n mod d`.  
++  `mpz_class(t)` - A class that allows us to handle large integers  
++  `mpz_mod(r, n, d)` - Performs the modulo operation  by setting `r` to `n mod d`.  
 +  `mpz_gcd(rop, op1, op2)` - Sets `rop` to the greatest common divisor of `op1` and `op2`.  
 +  `mpz_invert(rop, op1, op2)` - Computes the inverse of `op1 mod op2` and puts the result in `rop`.  
++  `mpz_probab_prime_p(n, reps)` - Determines whether `n` is prime. Returns 2 if definitely prime, 1 if probably prime, and 0 if `n` is definitely composite.
 
 
 
@@ -35,8 +36,11 @@ While this algorithm can be confusing to implement in C++, we can use a helpful 
 
 
 
-
-
+Breaking RSA  
+------------------
+One of the quickest ways to factor a large number is to use the [Pollard's rho Algorithm](http://en.wikipedia.org/wiki/Pollard's_rho_algorithm)
+Using C++
+<script src="https://gist.github.com/mclayton7/d3bb6be82587a5e39bf2.js"></script>
 
 
 
