@@ -11,6 +11,11 @@ of the styles inside media queries.
 ******************************************************************/
 @import url(http://fonts.googleapis.com/css?family=Lato);
 @import url(http://fonts.googleapis.com/css?family=Arvo);
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -472,49 +477,21 @@ A WORD OF WARNING: It's very easy to overdo it here. Be careful and
 remember less is more.
 
 ******************************************************************/
-/*********************
-CLEARFIXIN'
-*********************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000323}}
-.clearfix {
-  zoom: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000325}}
-  .clearfix:before, .clearfix:after {
-    content: "";
-    display: table; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000326}}
-  .clearfix:after {
-    clear: both; }
-
-/*********************
-TOOLS
-*********************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000334}}
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000319}}
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden; }
 
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000326}}
 .text-left {
   text-align: left; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000327}}
 .text-center {
   text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_mixins\.scss}line{font-family:\0000328}}
 .text-right {
   text-align: right; }
 
