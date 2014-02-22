@@ -11,27 +11,66 @@ layout: project
             
 <h2>The Algorithm:</h2>
 <h3>Key Generation:</h3>
-<p>
-	<ol>
-		<li>Choose two distinct prime numbers, <em>p</em> and <em>q</em>.</li>
-		<li>Compute *n = p\*q*</li>
-		<li>Compute *φ(n) = φ(p)φ(q) = (p − 1)(q − 1)* where φ(n) is the <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">Totient Function</a></li>
-		<li>Choose an integer <em>e</em> such that 1 < <em>e</em> < φ(n) and gcd(<em>e</em>, φ(n)) = 1. In other words, <em>e</em> and φ(n) are coprime.</li>
-		<li>Solve for <em>d</em>, where <em>d</em> is: *d = e−1*</li>
-		<li><em>e</em> is now the Public Key, and <em>d</em> is now the Private Key</li>
-	</ol>
-</p>
+<ol>
+	<li>Choose two distinct prime numbers, <em>p</em> and <em>q</em>.</li>
+	<li>Compute *n = p\*q*</li>
+	<li>Compute *φ(n) = φ(p)φ(q) = (p − 1)(q − 1)* where φ(n) is the <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">Totient Function</a></li>
+	<li>Choose an integer <em>e</em> such that 1 < <em>e</em> < φ(n) and gcd(<em>e</em>, φ(n)) = 1. In other words, <em>e</em> and φ(n) are coprime.</li>
+	<li>Solve for <em>d</em>, where <em>d</em> is: *d = e−1*</li>
+	<li><em>e</em> is now the Public Key, and <em>d</em> is now the Private Key</li>
+</ol>
 
 <h2>GMP Library Help</h2>
 <p>While this algorithm can be confusing to implement in C++, we can use a helpful library called <a href="https://gmplib.org/">GMP (GNU Multiple Precision Arithmetic Library</a>. Specifically, we'll use the following classes and functions to help us:
-	<ul>
-		<li>mpz_class(t) - A class that allows us to handle large integers  </li>
-		<li>mpz_mod(r, n, d) - Performs the modulo operation  by setting r to n mod d. </li>
-		<li>mpz_gcd(rop, op1, op2) - Sets rop to the greatest common divisor of op1 and op2. </li>
-		<li>mpz_invert(rop, op1, op2) - Computes the inverse of op1 mod op2 and puts the result in rop. </li>
-		<li>mpz_probab_prime_p(n, reps) - Determines whether n is prime. Returns 2 if definitely prime, 1 if probably prime, and 0 if n is definitely composite.</li>
-	</ul>
 </p>
+<ul>
+	<li><code>mpz_class(t)</code> - A class that allows us to handle large integers  </li>
+	<li><code>mpz_mod(r, n, d)</code> - Performs the modulo operation  by setting r to n mod d. </li>
+	<li><code>mpz_gcd(rop, op1, op2)</code> - Sets rop to the greatest common divisor of op1 and op2. </li>
+	<li><code>mpz_invert(rop, op1, op2)</code> - Computes the inverse of op1 mod op2 and puts the result in rop. </li>
+	<li><code>mpz_probab_prime_p(n, reps)</code> - Determines whether n is prime. Returns 2 if definitely prime, 1 if probably prime, and 0 if n is definitely composite.</li>
+</ul>
+<h2>The C++ Code Explained</h2>
+<p>The following will be excerpts from the code found in the <a href="https://github.com/mclayton7/RSA/blob/master/RSA.cc">RSA.cc</a> file.</p>
+<h3>Key Generation</h3>
+The following is the function <code>generateKey</code> that accepts an integer for the size of the key (32, 64, 128, 256, etc.).
+<pre class="line-numbers"><code class="language-c++">// Generate the public and private keys
+void generateKey(int size, mpz_class& n, mpz_class& d, mpz_class& e)
+{
+	bool prime = false;
+	bool divisor = false;
+	mpz_class PNUM, result, q, p, phiN;
+	mpz_class one = mpz_class(1);
+
+	// Compute p & q
+	for(int i = 0; i < 2; ++i)
+	{
+		while(!prime)
+		{
+			PNUM = r.get_z_bits(size);
+			int isPrime = 1;
+			isPrime = mpz_probab_prime_p(PNUM.get_mpz_t(), 100);
+			if(isPrime != 0) break;
+		}
+		if(i == 0) p = PNUM;
+		if(i == 1) q = PNUM;
+	}
+	n = p * q;
+	phiN = (p - 1) * (q - 1);
+
+	while(!divisor)
+	{
+		d = r.get_z_bits(size * 2);
+		mpz_gcd(result.get_mpz_t(), d.get_mpz_t(), phiN.get_mpz_t());
+		if((d < phiN) && (result == one)) break;
+	}
+
+	// Compute e:
+	mpz_invert(e.get_mpz_t(), d.get_mpz_t(), phiN.get_mpz_t());
+
+}	
+</code></pre>
+
 
 <h2>Breaking RSA</h2>
 <p>One of the quickest ways to factor a large number is to use <a href="http://en.wikipedia.org/wiki/Pollard's_rho_algorithm)">Pollard's Rho Algorithm</a>. If you're interested in using GPU power like CUDA, there is a GPU factoring tool called "Templar" that's out there on the internets (<em>allegedly</em> created by .</p>

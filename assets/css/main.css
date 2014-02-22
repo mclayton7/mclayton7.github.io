@@ -11,6 +11,7 @@ of the styles inside media queries.
 ******************************************************************/
 @import url(http://fonts.googleapis.com/css?family=Lato);
 @import url(http://fonts.googleapis.com/css?family=Arvo);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
 /*
 Here's a great tutorial on how to
 use color variables properly:
@@ -436,6 +437,7 @@ dd {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_typography\.scss}line{font-family:\0000315}}
 h1, h2, h3, h4, h5, h6 {
+  font-family: Lato;
   font-weight: 700;
   color: gray; }
 
@@ -444,8 +446,8 @@ h2 {
   font-family: "Arvo", serif; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_typography\.scss}line{font-family:\0000324}}
-p {
-  font-family: "Arvo";
+p, ol, ul {
+  font-family: "PT Serif";
   font-weight: 400;
   font-size: 22px;
   line-height: 1.5;
@@ -539,9 +541,10 @@ probably best not to use it. I mean, were you going to anyway? */
 html, body {
   height: 100%;
   font-size: 100%;
-  color: #333300; }
+  color: #333300;
+  background-color: #fdfdfd; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000326}}
 header {
   background: #fff;
   border-bottom: 1px solid #eee;
@@ -554,19 +557,19 @@ header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000338}}
   header .container {
     padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000343}}
 footer {
   color: #999;
   text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000346}}
   footer .container {
     padding: 2rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000352}}
 .toggle-nav {
   background: url("/assets/img/toggle-nav.png");
   cursor: pointer;
@@ -576,40 +579,40 @@ footer {
   width: 27px;
   margin: 0.5rem 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000362}}
 .home-nav {
   text-align: center;
   font-family: 'Arvo', sans-serif;
   padding-bottom: 4em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000365}}
   .home-nav h4 {
     padding-bottom: 1.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000371}}
 nav {
   height: 0;
   margin: 0;
   overflow: hidden;
   padding: 0;
   width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000377}}
   nav.hidden {
     height: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000380}}
   nav.visible {
     height: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000383}}
   nav ul {
     margin: 0.5rem 0 0 0;
     overflow: hidden;
     padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000388}}
   nav li {
     border-top: 1px solid #eee;
     list-style: none;
     margin-bottom: 0;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\0000393}}
     nav li a {
       color: #999;
       font-size: 1rem;
@@ -619,15 +622,15 @@ nav {
       -webkit-transition: color 0.2s ease-out;
       transition: color 0.2s ease-out;
       padding: 0.8rem 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003103}}
     nav li:last-child a {
       padding-bottom: 0.3rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003106}}
     nav li a:hover {
       color: #333;
       text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003114}}
 .circle-image {
   display: block;
   max-width: 200px;
@@ -636,30 +639,57 @@ nav {
   border-radius: 50%;
   margin: 0 auto 1.5rem auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003124}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003125}}
 body p {
   margin-bottom: 2em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003131}}
 .fourOHfour {
   text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003133}}
   .fourOHfour h1 {
     font-size: 5rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003139}}
 .twitter {
   display: inline-block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003148}}
 .hero {
   display: block;
   text-align: center;
   padding-bottom: 3em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003151}}
   .hero h1 {
     font-family: 'lato', sans-serif;
     font-size: 4rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003159}}
+.page-header {
+  text-align: center;
+  font-size: 3em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003165}}
+.project-list li {
+  padding-bottom: 2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003167}}
+  .project-list li span {
+    margin-top: 0.5em;
+    color: #777777;
+    font-style: italic; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003177}}
+.project-page h1, .project-page h2 {
+  color: #79bd9a;
+  padding-top: 2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003182}}
+.project-page ul {
+  list-style-type: disc;
+  margin-left: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_base\.scss}line{font-family:\00003186}}
+.project-page ol {
+  list-style-type: decimal;
+  margin-left: 50px; }
 
 @media only screen and (min-width: 481px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_481up\.scss}line{font-family:\000031}}
@@ -805,8 +835,15 @@ body p {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_grid\.scss}line{font-family:\0000352}}
   .container {
     margin: 0 auto;
-    max-width: 1140px;
-    width: 90%; } }
+    width: 90%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_768up\.scss}line{font-family:\000032}}
+  .container {
+    max-width: 960px; } }
+@media only screen and (min-width: 1240px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/macclayton\/Developer\/mclayton7\.github\.io\/assets\/scss\/_1240up\.scss}line{font-family:\000036}}
+  .container {
+    max-width: 1140px; } }
 /*
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
