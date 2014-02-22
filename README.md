@@ -6,7 +6,7 @@ This is the [Jekyll](http://www.jekyllrb.com) source code for my personal websit
 
 Useful Commands
 --------------------
-Because I use [SASS] (http://sass-lang.com) (/assets/scss), I need a way to compile the SASS to CSS before deploying to GitHub. Unfortunately, you cannot use plugins with the way GitHub Pages works. The easiest way around this is to use a custom Rakefile.  
+Because I use [SASS](http://sass-lang.com) (/assets/scss), I need a way to compile the SASS to CSS before deploying to GitHub. Unfortunately, you cannot use plugins with the way GitHub Pages works. The easiest way around this is to use a custom Rakefile.  
 1. `rake dev:build` compiles the SASS and starts a development server  
 2. `rake dev:pro` builds the site for production. This minifies everything in addition to compiling the SASS
 3. `rake commit_deploy` commits the site (using Git) and deploys to GitHub.
