@@ -18,9 +18,10 @@
 
 html, body {
 	height: 100%;
-	font-size: 100%;
+	font-size: 125%;
 	color: $base-font-color;
 	background-color: rgb(253, 253, 253);
+	font-family: "PT Serif", sans-serif
 }
 
 header {
@@ -123,7 +124,7 @@ nav {
 // Body Styling:
 body {
 	p {
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 }
 
@@ -176,7 +177,10 @@ body {
 .project-page {
 	h1, h2 {
 		color: $title-color;
-		padding-top: 2em;
+		padding-top: 1em;
+	}
+	h3 {
+		padding-top: 1em;
 	}
 
 	ul {
@@ -195,4 +199,10 @@ body {
 // 		background: #f8f8f8;
 // 		border-radius: 3px;
 // 	}
+	pre {
+		font-size: 0.75em;
+		code {
+
+		}
+	}
 }
