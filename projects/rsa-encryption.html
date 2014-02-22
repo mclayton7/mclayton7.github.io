@@ -75,7 +75,39 @@ void generateKey(int size, mpz_class& n, mpz_class& d, mpz_class& e)
 <h2>Breaking RSA</h2>
 <p>One of the quickest ways to factor a large number is to use <a href="http://en.wikipedia.org/wiki/Pollard's_rho_algorithm)">Pollard's Rho Algorithm</a>. If you're interested in using GPU power like CUDA, there is a GPU factoring tool called "Templar" that's out there on the internets (<em>allegedly</em> created by .</p>
 Using C++
-<script src="https://gist.github.com/mclayton7/d3bb6be82587a5e39bf2.js"></script>
-
+<pre class="line-numbers"><code class="language-c++">// Pollard's rho algorithm
+bool FactorRho(const mpz_class& n, mpz_class& result)
+{
+	mpz_class x = mpz_class(2);
+	mpz_class y = mpz_class(2);
+	mpz_class d = mpz_class(1);
+ 
+	while(d == mpz_class(1))
+	{
+		// X <-- f(x)
+		x = x * x + 1;
+		mpz_mod(x.get_mpz_t(), x.get_mpz_t(), n.get_mpz_t());
+ 
+		// Y <-- f(f(y))
+		y = y * y + 1;
+		mpz_mod(y.get_mpz_t(), y.get_mpz_t(), n.get_mpz_t());
+		y = y * y + 1;
+		mpz_mod(y.get_mpz_t(), y.get_mpz_t(), n.get_mpz_t());
+ 
+		// D <-- GCD(abs(x-y), n)
+		d = x - y;
+		mpz_gcd(d.get_mpz_t(), d.get_mpz_t(), n.get_mpz_t());
+	}
+	if(d == n)
+	{
+		return false;
+	}
+	else
+	{
+		result = d;
+		return true;
+	}	
+}
+</code></pre>
 <h2>Conclusion</h2>
 <p>RSA is a popular cryptography algorithm that is widely used across many platforms. Hopefully this article gives some insight on how to implement a basic version of an encryption & decryption function.</p>
