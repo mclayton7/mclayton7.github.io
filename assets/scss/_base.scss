@@ -24,6 +24,15 @@ html, body {
 	font-family: "PT Serif", sans-serif
 }
 
+h1, h2 {
+	a {
+		color: $title-color;
+	}
+	a:visited {
+		color: #7794B2;
+	}
+}
+
 header {
 	background: #fff;
 	border-bottom: 1px solid #eee;
