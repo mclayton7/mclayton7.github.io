@@ -20,8 +20,10 @@ $font-size: 12px;
 h1, h2 {
 	color: $title-color;
 	font-family: "Arvo", serif;
+	margin: 40px 0 8px 0;
 }
 h3, h4 {
+	margin: 40px 0 8px 0;	
 	font-family: 'Lato';
 	font-weight: 700;
 	color: gray;
@@ -34,6 +36,10 @@ p, ol, ul {
 	line-height: 1.5em;
 	letter-spacing: 0.01rem;
 	color: rgb(51, 51, 0);
+}
+
+p {
+	margin-bottom: 30px;
 }
 
 /*
