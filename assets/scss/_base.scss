@@ -24,6 +24,11 @@ html, body {
 	font-family: "PT Serif", sans-serif
 }
 
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
 h1, h2 {
 	a {
 		color: $title-color;
