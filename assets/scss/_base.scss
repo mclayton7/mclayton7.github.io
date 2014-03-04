@@ -63,6 +63,15 @@ footer {
 	}
 }
 
+img {
+	.img-header {
+		margin-top: 1.5em;
+
+	}
+	max-width: 100%;
+	max-height: 100%;
+}
+
 // Navigation:
 .toggle-nav {
 	background: url("/assets/img/toggle-nav.png");
@@ -93,7 +102,11 @@ footer {
 		text-decoration: none;
 		color: gray;
 	}
+}
 
+.meta {
+	font-family: 'Arvo';
+	color: gray;
 }
 
 nav {
@@ -153,7 +166,7 @@ nav {
 // Body Styling:
 body {
 	p {
-		margin-bottom: 1em;
+		margin-bottom: 1.5em;
 	}
 }
 
