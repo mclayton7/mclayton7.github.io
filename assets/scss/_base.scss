@@ -29,6 +29,14 @@ html, body {
   width: 90%;
 }
 
+.numbered-list {
+	list-style-type: decimal;
+}
+
+.bullet-list {
+	list-style-type: disc;
+}
+
 h1, h2 {
 	a {
 		color: $title-color;
@@ -213,6 +221,13 @@ body {
 			font-style: italic;
 		}
 	}
+}
+
+code {
+	// border: 1px rgb(226, 226, 226);
+	// background: rgb(248, 248, 248);
+	// padding: 0.05em 0.2em;
+	// font-size: 0.9em;
 }
 
 // Styling embedded code

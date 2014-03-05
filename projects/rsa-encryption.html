@@ -11,25 +11,33 @@ layout: default
             
 <h2>The Algorithm:</h2>
 <h3>Key Generation:</h3>
-<ol>
+<ol class="numbered-list">
 	<li>Choose two distinct prime numbers, <em>p</em> and <em>q</em>.</li>
 	<li>Compute <em>n</em> = <em>p*q</em></li>
-	<li>Compute <em>φ(n)</em> = <em>φ(p)φ(q) = (p − 1)(q − 1)</em> where <em>φ(n)</em> is the <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">Totient Function</a></li>
+	<li>Compute <em>φ(n)</em> = <em>φ(p)φ(q) = (p − 1)(q − 1)</em> where <em>φ(n)</em> is the <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">Totient Function</a>.</li>
 	<li>Choose an integer <em>e</em> such that 1 < <em>e</em> < <em>φ(n)</em> and gcd(<em>e</em>, <em>φ(n)</em>) = 1. In other words, <em>e</em> and <em>φ(n)</em> are coprime.</li>
-	<li>Solve for <em>d</em>, given <em>d*e</em>= 1*(mod(<em>φ(n)</em>)</li>
-	<li>(<em>n,e</em>) is now the Public Key, and (<em>n,d</em>) is now the Private Key</li>
+	<li>Solve for <em>d</em>, given <em>d*e</em>= 1*(mod(<em>φ(n)</em>).</li>
+	<li>(<em>n,e</em>) is now the Public Key, and (<em>n,d</em>) is now the Private Key.</li>
 </ol>
 <h3>Encryption:</h3>
 The encryption for message <em>M</em> is simple:
-<ol>
-	<li>Convert the message <em>M</em> into an integer <em>m</em> where 0 &le; <em>m</em> < <em>n</em></li>
+<ol class="numbered-list">
+	<li>Convert the message <em>M</em> into an integer <em>m</em> where 0 &le; <em>m</em> < <em>n</em>. This can easily done just by using ASCII or unicode numbers and concatenating the numbers together to form a large integer.</li>
+	<li>Compute the encrypted message (<code>c</code>) using the following formula:  <em>c</em> &#8801; (<em>m</em>^<em>e</em>) mod(<em>n</em>), where (<em>n</em>, <em>e</em>) is the <u>public key</u>.</li>
+</ol>
+
+<h3>Decryption:</h3>
+To decrypt the message:
+<ol class="numbered-list">
+	<li>Compute the decrypted message <code>m</code> by computing: <em>m</em> &#8801; (<em>c</em>^<em>d</em>) mod(<em>n</em>), where (<code>n</code>, <code>d</code> is the <u>private key</u>.</li>
+	<li>Then split up the message using the aformentoned encoding type (ASCII, unicode, etc.).</li>
 </ol>
 
 
 <h2>GMP Library Help</h2>
 <p>While this algorithm can be confusing to implement in C++, we can use a helpful library called <a href="https://gmplib.org/">GMP (GNU Multiple Precision Arithmetic Library</a>. Specifically, we'll use the following classes and functions to help us:
 </p>
-<ul>
+<ul class="bullet-list">
 	<li><code>mpz_class(t)</code> - A class that allows us to handle large integers  </li>
 	<li><code>mpz_mod(r, n, d)</code> - Performs the modulo operation  by setting r to n mod d. </li>
 	<li><code>mpz_gcd(rop, op1, op2)</code> - Sets rop to the greatest common divisor of op1 and op2. </li>
@@ -39,7 +47,7 @@ The encryption for message <em>M</em> is simple:
 <h2>The C++ Code Explained</h2>
 <p>The following will be excerpts from the code found in the <a href="https://github.com/mclayton7/RSA/blob/master/RSA.cc">RSA.cc</a> file.</p>
 <h3>Key Generation</h3>
-The following is the function <code>generateKey</code> that accepts an integer for the size of the key (32, 64, 128, 256, etc.).
+The following is the function <code>generateKey</code> that accepts an integer for the size of the key (32, 64, 128, 256, etc.). The resulting key is stored in the <code>n</code>, <col>d</col>, and <code>e</code> variables.
 <pre class="line-numbers"><code class="language-c++">// Generate the public and private keys
 void generateKey(int size, mpz_class& n, mpz_class& d, mpz_class& e)
 {
@@ -77,6 +85,7 @@ void generateKey(int size, mpz_class& n, mpz_class& d, mpz_class& e)
 }</code></pre>
 
 <h3>Encryption:</h3>
+This is an easy function that receives the message (<code>m</code>) and keys (<code>e</code> and <code>n</code>), and outputs the encrypted message in variable <code>c</code>.
 <pre class="line-numbers"><code class="language-c++">// Encrypt Function
 void encrypt(	  mpz_class& c, // Encrypted Message
 			const mpz_class& m, // Message to be encrypted
@@ -91,6 +100,7 @@ void encrypt(	  mpz_class& c, // Encrypted Message
 }</code></pre>
 
 <h3>Decryption:</h3>
+
 <pre class="line-numbers"><code class="language-c++">// Decrypt Function
 void decrypt(	  mpz_class& m, // Resulting Message
 			const mpz_class& c, // Message
