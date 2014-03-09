@@ -18,8 +18,21 @@ namespace :site do
     })).process
   end
 
+  desc "Commit site"
+  task :commit do
+    puts "\n## Staging modified files"
+    status = system("git add -A")
+    puts status ? "Success" : "Failed"
+    puts "\n## Committing a site build at #{Time.now.utc}"
+    message = "Build site at #{Time.now.utc}"
+    status = system("git commit -m \"#{message}\"")
+    puts status ? "Success" : "Failed"
+    puts "\n## Pushing commits to remote"
+    status = system("git push origin source")
+    puts status ? "Success" : "Failed"
+  end
 
-  desc "Generate and publish blog to gh-pages"
+  desc "Generate and publish blog"
   task :publish => [:generate] do
     Dir.mktmpdir do |tmp|
       cp_r "_site/.", tmp

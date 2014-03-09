@@ -1,21 +1,19 @@
 inc:
-  # Blog Information
-  title:        "Jekyll Incorporated"
-  subtitle:     "Modern Jekyll based blog for companies"
+  # Website Information
+  title:        "Mac Clayton"
+  subtitle:     "Mac Clayton's Personal Website"
   cover_image:  blog-cover.jpg
   logo:         logo.png
   
-  # Company information
+  # User Information
   company:      Incorporated
-  url:          http://sendtoinc.com/
-  facebook:     sendtoinc
-  twitter:      sendtoinc
-  gplus:        '101183822199340201470'
-  about_link:   https://sendtoinc.com/about/
-  
-  # Product Information
-  product_link: http://incorporated.sendtoinc.com/
-  tagline:      "Get a modern blog for your company"
+  url:          macclayton.com
+  facebook:     mac.clayton
+  twitter:      macclayton
+  instagram:    mclayton7
+  github:       mclayton7
+  gplus:        'macclayton7'
+  about_link:   /about/
   
   # Comments
   disqus:
@@ -41,7 +39,7 @@ inc:
   
   # Setup your fonts, colors etc at _assets/stylesheets/main.scss
 
-url:         http://incorporated.sendtoinc.com
+url:         http://macclayton.com
 source:      .
 destination: ./_site
 plugins:     ./_plugins
@@ -110,7 +108,6 @@ redcloth:
 # jekyll-assets: see more at https://github.com/ixti/jekyll-assets
 #
 assets:
-
   dirname: assets
   baseurl: /assets/
   sources:
