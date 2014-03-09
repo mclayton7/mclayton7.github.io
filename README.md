@@ -1,12 +1,63 @@
+# Jekyll Incorporated
+Modern Jekyll based blog. Great for companies, products or anything. See live at [blog.sendtoinc.com](http://blog.sendtoinc.com)
 
-Source code for macclayton.com
-=========================
+## Installation & Usage
+    bundle install
+    jekyll serve --watch
 
-This is the [Jekyll](http://www.jekyllrb.com) source code for my personal website that I host using [GitHub Pages](http://pages.github.com/). Because I need SASS compilation, you'll need to switch to the source branch (if you clone this repo) to do your work, because the Rakefile will compile all the assets to the master branch.
+_Note: Requires Ruby version 1.9.3 =>. For example use [rbenv](https://github.com/sstephenson/rbenv)_   
+    
+## Configuration
+Edit: _config.yml (general options), main.css (theme colors &amp; fonts)
 
-Useful Commands
---------------------
-Because I use [SASS](http://sass-lang.com) (/assets/scss), I need a way to compile the SASS to CSS before deploying to GitHub. Unfortunately, you cannot use plugins with the way GitHub Pages works. The easiest way around this is to use a custom Rakefile.  
-1. `rake dev:build` compiles the SASS and starts a development server  
-2. `rake dev:pro` builds the site for production. This minifies everything in addition to compiling the SASS
-3. `rake commit_deploy` commits the site (using Git) and deploys to GitHub.
+```
+jekyll-incorporated/
+├── _config.yml
+├── _assets/
+    ├── stylesheets/
+        ├── main.scss
+```
+
+_Note: when editing _config.yml, you need to restart jekyll to see the changes.__
+
+    
+## Publish to Github Pages
+1. Add your domain to _CNAME_
+2. Edit your repo address at _Rakefile_
+    
+Run rake task. **NOTE: It will deploy the generated site to _gh-pages_ branch overwriting it**    
+``` 
+rake site:publish
+```
+
+## Usage examples
+
+* Adroll Engineering http://tech.adroll.com/
+* Brace.io blog http://blog.brace.io/
+* Spark.io blog http://blog.spark.io/
+* Department of Better Technology http://blog.dobt.co/
+
+## Authors
+
+Originally build for [sendtoinc.com](https://sendtoinc.com), your workspace for sharing and organizing knowledge
+
+**Karri Saarinen**
+
++ [http://twitter.com/karrisaarinen](http://twitter.com/karrisaarinen)
++ [http://github.com/ksaa](http://github.com/ksaa)
+
+**Jori Lallo**
+
++ [http://twitter.com/jorilallo](http://twitter.com/jorilallo)
++ [http://github.com/jorde](http://github.com/jorilallo)
+
+## Todo:
+
++ Documentation
++ Less config files
++ Better deploy scripts
+
+## Copyright and license
+
+Copyright 2013 Kippt Inc. under [The MIT License ](LICENSE)
+

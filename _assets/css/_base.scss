@@ -37,6 +37,14 @@ html, body {
 	list-style-type: disc;
 }
 
+.colored-box {
+	border: 5px solid red;
+}
+
+.center-text {
+	text-align: center;
+}
+
 h1, h2 {
 	a {
 		color: $title-color;
