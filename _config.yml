@@ -28,16 +28,6 @@ inc:
     hn:         false
     
   
- # Analytics     
-  analytics:
-    google: false # Add tracking code in _includes/_google-analytics.html
-      
-      
-  # Google Fonts
-  # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
-  google_font: 'Droid+Sans:400,700'
-  
-  # Setup your fonts, colors etc at _assets/stylesheets/main.scss
 
 url:         http://macclayton.com
 source:      .
@@ -57,8 +47,9 @@ pygments:    true
 relative_permalinks: true
 
 permalink:     pretty
-paginate_path: 'page:num'
+# permalinks: /:categories/:title
 paginate: 10
+# paginate_path: 'blog/page:num'
 
 markdown:      maruku
 markdown_ext:  markdown,mkd,mkdn,md

@@ -4,37 +4,23 @@ title: Projects
 ---
 <h1 class="page-header">Projects</h1>
 
+<article class="container">
 <ul class="project-list">
-  <li>
-    <h2><a href="rsa-encryption/">RSA Encryption</a></h2>
-    <span class="date">Implementing the RSA Algorithm</span>
-  </li>
-  <li>
-    <h2><a href="pathloss-opengl/">Pathloss Algorithm</a></h2>
-    <span class="date">Implementing Djikstra's Algorithm</span>
-  </li>
-  <li>
-    <h2><a href="fourier-transform/">Basic Fourier Transform</a></h2>
-    <span class="date">Basic FFT Algorithm</span>
-  </li>
-  <li>
-    <h2><a href="2dfourier-transform/">2D Fourier Transform</a></h2>
-    <span class="date">Multidimensional FFT</span>
-  </li>
-  <li>
-    <h2><a href="complex-calculator/">CLI Complex Number Calculator</a></h2>
-    <span class="date">Understanding C++</span>
-  </li>
-  <li>
-    <h2><a href="MBSet/">Mandlebrot Set</a></h2>
-    <span class="date">Generating a Mandlebrot Fractal</span>
-  </li>
-  <li>
-    <h2><a href="opengl-jet/">OpenGL Jet</a></h2>
-    <span class="date">Rendering an OpenGL Object</span>
-  </li>
-  <li>
-    <h2><a href="this-blog/">This Website</a></h2>
-    <span class="date">The tech behind my website</span>
-  </li>
+{% for page in site.pages %}
+{% if page.type == 'project' %}
+    <section class="index">
+         {% if page.author.image %}<img src="/images/{{ page.author.image }}" class="avatar">{% endif %}
+        <div>
+            <h2 class="title"><a href="{{ page.url }}" rel="prefetch">{{ page.title }}</a></h2>
+            <p>{{ page.excerpt }}</p>
+            <div class="meta">
+                Written By <address>{{ page.author.name }}</address> &mdash;
+                <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            </div>            
+        </div>
+        <hr>
+    </section>	
+{% endif %}
+{% endfor %}
 </ul>
+</article>

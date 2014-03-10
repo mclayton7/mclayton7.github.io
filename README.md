@@ -6,3 +6,4 @@ This is the [Jekyll](http://www.jekyllrb.com) source code for my personal websit
 Inspired By:
 --------------------
 1. http://incorporated.sendtoinc.com/ (using their asset pipeline)
+2. http://daneden.github.io/animate.css/

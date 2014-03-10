@@ -19,7 +19,7 @@
 html, body {
 	height: 100%;
 	font-size: 90%;
-	color: $base-font-color;
+	color: $text-color;
 	background-color: rgb(253, 253, 253);
 	font-family: "PT Serif", sans-serif
 }
@@ -123,6 +123,27 @@ img {
 .meta {
 	font-family: 'Arvo';
 	color: gray;
+}
+
+.index {
+    margin:0 5em;
+    
+    > div{
+        display:table-cell;
+    }
+    
+    .title {
+        margin:0em 0 0.6em;
+    }
+    
+    .avatar {
+        float:left;
+        border-radius:62px;
+        height:48px;
+        width:48px;
+        margin-top:0;
+        margin-right:30px;
+    }
 }
 
 nav {
