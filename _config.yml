@@ -104,7 +104,6 @@ assets:
   sources:
     - _assets/js
     - _assets/css
-    - images
   js_compressor: uglifier
   css_compressor: sass
   cachebust: none

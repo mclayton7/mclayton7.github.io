@@ -9,7 +9,6 @@ layout: default
 </div>
 {% endif %}
 <article>
-
     <div class="container">
         <header>
             <div class="meta">
@@ -20,7 +19,7 @@ layout: default
             {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
         </header>
 
-        <section>
+        <section class="container">
             {{ content }}
             {% include _social.html %}
         </section>
