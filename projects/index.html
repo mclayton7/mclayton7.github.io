@@ -7,7 +7,7 @@ title: Projects
 <article class="container">
 <ul class="project-list">
 {% for page in site.pages %}
-{% if page.type == 'project' %}
+{% if page.type == 'project' and page.publish %}
     <section class="index">
          {% if page.author.image %}<img src="/images/{{ page.author.image }}" class="avatar">{% endif %}
         <div>
