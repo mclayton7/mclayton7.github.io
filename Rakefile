@@ -32,8 +32,8 @@ namespace :site do
     puts status ? "Success" : "Failed"
   end
 
-  desc "Generate and publish blog"
-  task :publish => [:generate] do
+  desc "Generate and deploy blog"
+  task :deploy => [:generate] do
     Dir.mktmpdir do |tmp|
       cp_r "_site/.", tmp
       Dir.chdir tmp
@@ -45,4 +45,9 @@ namespace :site do
       system "git push origin master --force"
     end
   end
+  desc "Commit and deploy _site/"
+    task :cd => [:commit, :deploy] do
+  end
 end
+
+
