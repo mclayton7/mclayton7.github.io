@@ -22,5 +22,19 @@ layout: default
         <section class="container">
             {{ content }}
         </section>
-    </div>
+
+        <footer>
+            <h3>Sources:</h3>
+            <address>
+            {% if page.sources %}
+            <ul class="no-list-type">
+                {% for source in page.sources %}
+                    <li>
+                        <a href="{{ source }}" target="_blank"> {{ source }}</a>
+                    </li>
+                 {% endfor %}
+            </ul>
+            {% endif %}
+            </address>
+        </footer>
 </article>

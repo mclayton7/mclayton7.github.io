@@ -125,7 +125,7 @@ void decrypt(	  mpz_class& m, // Resulting Message
 
 
 <h2>Breaking RSA</h2>
-<p>One of the quickest ways to factor a large number is to use <a href="http://en.wikipedia.org/wiki/Pollard's_rho_algorithm">Pollard's Rho Algorithm</a>. If you're interested in using GPU power like CUDA, there are several GPU factoring tools available.</p>
+<p>To "break" RSA, you need a large amount of processing power. This can be as simple as using your computer's GPU, or a cloud cluster like Amazon's AWS. One way to break an RSA encrypted message is to factor <em>n</em> using a speedy algorithm. A great algorithm to factor a large number is <a href="http://en.wikipedia.org/wiki/Pollard's_rho_algorithm">Pollard's Rho Algorithm</a>. If you're interested in using GPU power like CUDA, there are several GPU factoring tools available.</p>
 <h3>Using C++</h3>
 <pre class="line-numbers"><code class="language-c++">// Pollard's rho algorithm
 bool FactorRho(const mpz_class& n, mpz_class& result)
