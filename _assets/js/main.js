@@ -1,4 +1,3 @@
-var item = "hello";
 $(document).ready( function() {
 	$(".toggle-nav").click( function() {
 	var navigation = $("nav");
@@ -11,9 +10,5 @@ $(document).ready( function() {
 	$('.language-filter li').click(function() {
 		$("li.active").removeClass("active");
 		$(this).addClass('active');
-		item = "goodby";
 	});
-	console.log(item);
 });
-
-
