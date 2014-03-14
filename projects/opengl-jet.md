@@ -22,6 +22,8 @@ This project focuses using the OpenGL graphics API to generate and display a 3-D
 #Parsing the .obj File
 This application can be broken into three sections, reading (parsing) the file, rendering the result, and handling the user interactions. To parse the .obj file, we'll use the `ifstream` library from the [Standard Template Library](http://en.wikipedia.org/wiki/Standard_Template_Library).
 
+#Rendering
+
 #Result
 The resulting render. Use the following keys to interact with the display:
 * `x` - rotate areound the X-axis
