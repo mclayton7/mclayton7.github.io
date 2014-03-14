@@ -8,12 +8,14 @@ languages: [C++, OpenGL]
 cover_image:
 
 excerpt: "Parsing and rendering a Wavefront OBJ file using OpenGL"
+
 github: "https://github.com/mclayton7/OpenGLJet"
 
-sources: ["http://en.wikipedia.org/wiki/Wavefront_.obj_file", "http://users.ece.gatech.edu/~riley/ece4893/"]
+sources: ["http://en.wikipedia.org/wiki/Wavefront_.obj_file", "http://users.ece.gatech.edu/~riley/ece8893/"]
 
 author:
   name: Mac Clayton
+  link: "http://macclayton.com"   
 ---
 
 #Intro

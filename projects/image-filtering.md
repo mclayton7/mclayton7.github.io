@@ -8,13 +8,16 @@ languages: [C++, Qt4]
 cover_image:
 
 excerpt: "Using a simple noise filtering algorithm to remove distortion from an image."
+
 github: "https://github.com/mclayton7/ImageFilteringQt4"
 
 sources: ["http://users.ece.gatech.edu/~riley/ece3090"]
 
 author:
   name: Mac Clayton
+  link: "http://macclayton.com"  
 ---
+
 #Intro
 This application is a quick demonstration of a recursive noise filtering algorithm.
 

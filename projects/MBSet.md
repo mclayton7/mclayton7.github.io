@@ -9,8 +9,13 @@ cover_image:
 
 excerpt: "Using OpenGL and other techniques to generate a Mandlebrot Fractal"
 
+github: ""
+
+sources: ["http://users.ece.gatech.edu/~riley/ece8893"]
+
 author:
   name: Mac Clayton
+  link: "http://macclayton.com"    
 ---
 
 <h1>Coming Soon</h1>

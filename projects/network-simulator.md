@@ -8,13 +8,16 @@ languages: [C++]
 cover_image:
 
 excerpt: "Simulating a network using a discrete event simulator (DES)"
+
 github: "https://github.com/mclayton7/NetSim"
 
-sources: ["http://en.wikipedia.org/wiki/Discrete_event_simulation", "http://users.ece.gatech.edu/~riley/ece4893/"]
+sources: ["http://en.wikipedia.org/wiki/Discrete_event_simulation", "http://users.ece.gatech.edu/~riley/ece8893/"]
 
 author:
   name: Mac Clayton
+  link: "http://macclayton.com"    
 ---
+
 # Intro
 A [Discrete event simulator](http://en.wikipedia.org/wiki/Discrete_event_simulation) is a type of simulator that revolves around a <em>state</em> that only changes when triggered by an <em>Event Queue</em>. It keeps track of time, and that time is only incremented by popping events off the Event Queue. Below is an overview of the Simulator's components, and a highlighting of some member variables.
 
