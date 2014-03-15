@@ -26,21 +26,21 @@ author:
 	<li>Choose two distinct prime numbers, <em>p</em> and <em>q</em>.</li>
 	<li>Compute <em>n</em> = <em>p*q</em></li>
 	<li>Compute <em>φ(n)</em> = <em>φ(p)φ(q) = (p − 1)(q − 1)</em> where <em>φ(n)</em> is the <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">Totient Function</a>.</li>
-	<li>Choose an integer <em>e</em> such that 1 < <em>e</em> < <em>φ(n)</em> and gcd(<em>e</em>, <em>φ(n)</em>) = 1. In other words, <em>e</em> and <em>φ(n)</em> are coprime.</li>
+	<li>Choose an integer <em>e</em> such that 1 &lt; <em>e</em> &lt; <em>φ(n)</em> and gcd(<em>e</em>, <em>φ(n)</em>) = 1. In other words, <em>e</em> and <em>φ(n)</em> are coprime.</li>
 	<li>Solve for <em>d</em>, given <em>d*e</em>= 1*(mod(<em>φ(n)</em>).</li>
 	<li>(<em>n,e</em>) is now the Public Key, and (<em>n,d</em>) is now the Private Key.</li>
 </ol>
 <h3>Encryption:</h3>
 The encryption for message <em>M</em> is simple:
 <ol class="numbered-list">
-	<li>Convert the message <em>M</em> into an integer <em>m</em> where 0 &le; <em>m</em> < <em>n</em>. This can easily done just by using ASCII or unicode numbers and concatenating the numbers together to form a large integer.</li>
+	<li>Convert the message <em>M</em> into an integer <em>m</em> where 0 &le; <em>m</em> &lt; <em>n</em>. This can easily done just by using ASCII or unicode numbers and concatenating the numbers together to form a large integer.</li>
 	<li>Compute the encrypted message (<code>c</code>) using the following formula:  <em>c</em> &#8801; (<em>m</em>^<em>e</em>) mod(<em>n</em>), where (<em>n</em>, <em>e</em>) is the <u>public key</u>.</li>
 </ol>
 
 <h3>Decryption:</h3>
 To decrypt the message:
 <ol class="numbered-list">
-	<li>Compute the decrypted message <code>m</code> by computing: <em>m</em> &#8801; (<em>c</em>^<em>d</em>) mod(<em>n</em>), where (<code>n</code>, <code>d</code> is the <u>private key</u>.</li>
+	<li>Compute the decrypted message <code>m</code> by computing: <em>m</em> &equiv; (<em>c</em>^<em>d</em>) mod(<em>n</em>), where (<code>n</code>, <code>d</code>) is the <u>private key</u>.</li>
 	<li>Then split up the message using the aformentoned encoding type (ASCII, unicode, etc.).</li>
 </ol>
 

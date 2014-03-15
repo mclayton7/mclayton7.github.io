@@ -45,8 +45,8 @@ A [Discrete event simulator](http://en.wikipedia.org/wiki/Discrete_event_simulat
 ## Memory Management
 For the sake of this application, memory management will be ignored for brevity. 
 
-# Rho (ρ)
-To simulate real world usage, every host node has an `OnOffApplication` that sends data to a random address at a random interval between 0 and 1 second. Then it turns off for another random interval. This cycling simulates data being sent across a network. Rho (ρ) is a value between 0 and 1 that sets the amount of data sent during an Applications "on" state. The higher the Rho, the larger the amount of data being sent across the networks.
+# Rho (&rho;)
+To simulate real world usage, every host node has an `OnOffApplication` that sends data to a random address at a random interval between 0 and 1 second. Then it turns off for another random interval. This cycling simulates data being sent across a network. Rho (&rho;) is a value between 0 and 1 that sets the amount of data sent during an Applications "on" state. The higher the Rho, the larger the amount of data being sent across the networks.
 
 # Running the Simulation and Collecting Statistics
 To setup the simulation, a network must first be constructed. Lines 43 - 218 show the creation of the nodes and the initialization of the various applications. Because each host node has a `PacketSyncApplication` that collects packet statistics, we can measure the following:
