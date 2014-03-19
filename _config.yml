@@ -51,7 +51,7 @@ permalink:     pretty
 paginate: 10
 # paginate_path: 'blog/page:num'
 
-markdown:      maruku
+markdown:      redcarpet
 markdown_ext:  markdown,mkd,mkdn,md
 textile_ext:   textile
 
