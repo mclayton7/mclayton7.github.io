@@ -110,3 +110,18 @@ assets:
   cache: false
   gzip: [ text/css, application/javascript ]
   debug: false
+
+#
+# Sitemap.xml Generator
+# 
+sitemap:
+  file: "/sitemap.xml"
+  exclude:
+    - "/atom.xml"
+    - "/feed.xml"
+    - "/feed/index.xml"
+  include_posts:
+    - "/blog/index.html"
+    - "projects/index.html"
+  change_frequency_name: "change_frequency"
+  priority_name: "priority"
