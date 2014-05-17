@@ -112,7 +112,7 @@ assets:
   debug: false
 
 #
-# Sitemap.xml Generator
+# Sitemap.xml Generator: https://github.com/kinnetica/jekyll-plugins
 # 
 sitemap:
   file: "/sitemap.xml"
