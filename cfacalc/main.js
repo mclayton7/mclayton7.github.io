@@ -135,6 +135,7 @@ function calcCFA()
   // The Formula:
   var result = ((nAccounts - nCards) * 2 + nPeople) + nCampers + nStaff;
   document.getElementById('result').value = result;
+  document.getElementById('result').focus();
 
   console.log(result);
 }
