@@ -142,7 +142,7 @@ function calcCFA()
   // The Formula (Old):
   // var result = ((nAccounts - nCards) * 2 + nPeople) + nCampers + nStaff;
   // New:
-  var result = (nPeople * (nAccounts / nCards)) + nCampers + nStaff;
+  var result = Math.ceil((nPeople * (nAccounts / nCards)) + nCampers + nStaff);
   document.getElementById('result').value = result;
   document.getElementById('result').focus();
 
