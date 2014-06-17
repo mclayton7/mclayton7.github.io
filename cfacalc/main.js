@@ -1,3 +1,10 @@
+var appCache = window.applicationCache;
+appCache.update(); // Attempt to update the user's cache.
+if (appCache.status == window.applicationCache.UPDATEREADY) {
+  appCache.swapCache();  // The fetch was successful, swap in the new cache.
+}
+
+
 function createAlert(message)
 {
   var alertbox = document.getElementById('message_placeholder');
