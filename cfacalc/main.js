@@ -132,8 +132,10 @@ function calcCFA()
     return false;
   }
 
-  // The Formula:
-  var result = ((nAccounts - nCards) * 2 + nPeople) + nCampers + nStaff;
+  // The Formula (Old):
+  // var result = ((nAccounts - nCards) * 2 + nPeople) + nCampers + nStaff;
+  // New:
+  var result = (nPeople * (nAccounts / nCards)) + nCampers + nStaff;
   document.getElementById('result').value = result;
   document.getElementById('result').focus();
 
