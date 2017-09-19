@@ -1,127 +1,38 @@
-inc:
-  # Website Information
-  title:        "Mac Clayton"
-  subtitle:     "Mac Clayton's Personal Website"
-  cover_image:  blog-cover.jpg
-  logo:         logo.png
-  
-  # User Information
-  company:      Incorporated
-  url:          macclayton.com
-  facebook:     mac.clayton
-  twitter:      macclayton
-  instagram:    mclayton7
-  github:       mclayton7
-  gplus:        'macclayton7'
-  about_link:   /about/
-  
-  # Comments
-  disqus:
-    # Eg. "exampleblog" Set to false to disable comments
-    shortname:  false
-  
-  # Sharing settings
-  sharing:
-    twitter:    false
-    facebook:   false
-    gplus:      false
-    hn:         false
-    
-  
-
-url:         http://macclayton.com
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-include:     ['.htaccess']
-exclude:     []
-timezone:    nil
-
-# Show future posts
-future:      false
-show_drafts: nil
-limit_posts: 0
-highlighter: pygments
-
-relative_permalinks: true
-
-permalink:     pretty
-# permalinks: /:categories/:title
-paginate: 10
-# paginate_path: 'blog/page:num'
-
-markdown:      redcarpet
-markdown_ext:  markdown,mkd,mkdn,md
-textile_ext:   textile
-
-excerpt_separator: "<!-- more -->"
-
-safe:        false
-host:        0.0.0.0
-port:        4000
-baseurl:     /
-lsi:         false
-
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
-
-rdiscount:
-  extensions: []
-
-redcarpet:
-  extensions: []
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  use_coderay: false
-
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style
-
-redcloth:
-  hard_breaks: true
-
+# Welcome to Jekyll!
 #
-# jekyll-assets: see more at https://github.com/ixti/jekyll-assets
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
 #
-assets:
-  dirname: assets
-  baseurl: /assets/
-  sources:
-    - _assets/js
-    - _assets/css
-  js_compressor: uglifier
-  css_compressor: sass
-  cachebust: none
-  cache: false
-  gzip: [ text/css, application/javascript ]
-  debug: false
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-#
-# Sitemap.xml Generator: https://github.com/kinnetica/jekyll-plugins
-# 
-sitemap:
-  file: "/sitemap.xml"
-  exclude:
-    - "/atom.xml"
-    - "/feed.xml"
-    - "/feed/index.xml"
-  include_posts:
-    - "/blog/index.html"
-    - "projects/index.html"
-  change_frequency_name: "change_frequency"
-  priority_name: "priority"
+title: Mac Clayton
+email: mckenzieclayton@gmail.com
+
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://macclayton.com" # the base hostname & protocol for your site, e.g. http://example.com
+instagram: mclayton7
+github: mclayton7
+facebook: mac.clayton
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+sass:
+  sass_dir: _assets/css
+  style: compressed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
