@@ -13,9 +13,11 @@ email: mckenzieclayton@gmail.com
 
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://macclayton.com" # the base hostname & protocol for your site, e.g. http://example.com
-instagram: mclayton7
-github: mclayton7
-facebook: mac.clayton
+instagram_id: mclayton7
+github_id: mclayton7
+twitter_id: macclayton
+facebook_id: mac.clayton
+linkedin_id: mclayton7
 
 # Build settings
 markdown: kramdown
