@@ -1,69 +1,120 @@
 ---
 layout: project
 type: project
-publish: false
+publish: true
 
 title: An Introduction to Smart Pointers
 languages: [C++]
 cover_image:
 
 excerpt: "Learning how to leverage smart pointers for better memory management."
-
-github: "https://github.com/mclayton7/PathExplorationQt4"
-
-sources: ["http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm", "http://users.ece.gatech.edu/~riley/ece3090"]
+github:
+sources:
 
 author:
   name: Mac Clayton
   link: "http://macclayton.com"  
 ---
 
-#Intro
+# Intro
 [Smart Pointers](http://en.wikipedia.org/wiki/Smart_pointer) are a great way to keep track of [pointers]( http://en.wikipedia.org/wiki/Pointer_\(computer_programming\)) in large applications. Unlike traditional pointers, a smart pointer not only keeps an address that points to a block of memory, but it also keeps track of the number of references to the object. Another phrase for smart pointers is [Automatic Reference Counting](http://clang.llvm.org/docs/AutomaticReferenceCounting.html) which is used heavily in iOS development.
 
-#Example
-Below is an example of a smart pointer for objects of class A. This is a simple class that stores "data" as an integer.
+# Example
+Below is an example of a smart pointer for templated types. This is a simple class that stores "data" as an integer.
 
-###Note: For practical applications, you would create a templated SmartPointer class or use std::unique_ptr as definied in [C++11](http://en.wikipedia.org/wiki/C%2B%2B11)
+### For practical applications, you would create a templated SmartPointer class or use std::shared_ptr as defined in the [C++11](http://en.wikipedia.org/wiki/C%2B%2B11) standard.
 
-###Class SmartPointer
-<pre class="line-numbers"><code class="language-c++">class SmartPointer
+### Class SmartPointer
+```cpp
+#pragma once
+
+template <class T>
+class SmartPointer
 {
 public:
-  SmartPointer(A*);
-  SmartPointer(const SmartPointer&); // Copy Constructor
-  ~SmartPointer();                   // Destructor
-  SmartPointer& operator=(const SmartPointer& rhs); // Assignment Operator
+  SmartPointer(T* data);
+  SmartPointer(const SmartPointer& other);
+  ~SmartPointer();
+
+  SmartPointer& operator=(const SmartPointer& other); 
+  const T& operator*() const;  
+  T& operator*();              
+  const T* operator->() const;
+  T* operator->();
 
 private:
-  A* sharedPtr; // Pointer to the object in memory that gets shared
-  int*  refCount;   // Number of references that exist
-  int lth;          // Length of shared memeory
-
-}</code></pre>
-
-###Class A
-<pre class="line-numbers"><code class="language-c++">class A
-{
-public:
-  A(int a0);  // Default Constructor
-  ~A();       // Default Destructor
-
-public:
-  int data;   // Data stored
+  T* data_;
+    int* refCount_;
 };
 
-// Constructor
-A::A(int a0)
- : a(a0)
+template <class T>
+SmartPointer<T>::SmartPointer(T* data)
+  : data_(data)
+  , refCount_(new int(1))
 {
-  std::cout << "Hello from A Constructor" << std::endl;
 }
 
-// Destructor
-A::~A()
+template <class T>
+SmartPointer<T>::SmartPointer(const SmartPointer& other)
+  : data_(other.data_)
+  , refCount_(other.refCount_)
 {
-  delete data;
-  std::cout << "Hello from A Destructor" << std::endl;
+  (*refCount_)++;
 }
-</code></pre>
+
+template <class T>
+SmartPointer<T>::~SmartPointer()
+{
+  (*refCount_)--;
+  if (*refCount_ == 0)
+    { 
+    delete data_;
+    delete refCount_;
+  }
+}
+
+template <typename T>
+SmartPointer<T>& SmartPointer<T>::operator=(const SmartPointer<T>& other)
+{
+  if (&other == this)
+  {
+    return *this;
+  }
+
+  (*refCount_)--;
+  if (*refCount_ == 0)
+  {  
+    delete data_;
+    delete refCount_;
+  }
+  refCount_ = other.refCount_;
+  data_ = other.data_;
+  (*refCount_)++; 
+  return *this;
+}
+ 
+template <typename T>
+const T& SmartPointer<T>::operator*() const
+{
+  return *data_;
+}
+
+template <typename T>
+T& SmartPointer<T>::operator*()
+{
+  return *data_;
+}
+
+template <typename T>
+const T* SmartPointer<T>::operator->() const
+{
+  return data_;
+}
+
+template <typename T>
+T* SmartPointer<T>::operator->()
+{
+  return data_;
+}
+
+```
