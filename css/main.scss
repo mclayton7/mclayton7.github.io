@@ -1,58 +1,36 @@
 ---
 ---
 
-
-// Import Web Fonts First:
 @import "webfonts";
-
-// Import Colors:
 @import "colors";
-
-// Import Normalize:
 @import "normalize";
-
-// Code Syntax Highlighting
-@import "prism";
-
-// Import Typography:
 @import "typography";
-
-// Import CSS Button Styles:
 @import "buttons";
-
-// Import Mixins:
 @import "mixins";
-
 @import "article";
-
-// Base (mobile) size:
 @import "base";
+@import "syntax/monokai.css";
 
-// Larger Mobile Devices:
 @media only screen and (min-width: 481px) {
 	@import "481up";
 }
 
-// Tablets and Smaller Laptops:
 @media only screen and (min-width: 768px) {
 	@import "grid";
 	@import "768up";
 }
 
-// Desktop:
 @media only screen and (min-width: 1030px) {
 	@import "1030up";
 }
 
-// Large Viewing Size:
 @media only screen and (min-width: 1240px) {
 	@import "1240up";
 }
 
-// Retina Devices:
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min--moz-device-pixel-ratio: 1.5),
        only screen and (min-device-pixel-ratio: 1.5) {
 	@import "2x";
-
 }
+
